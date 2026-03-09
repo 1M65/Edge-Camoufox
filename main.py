@@ -108,6 +108,9 @@ async def main():
         for i in range (3,5):
             await asyncio.sleep(2)
             await page.goto("https://www.bing.com//rewards/panelflyout?channel=bingflyout&partnerId=BingRewards&isDarkMode=0&ru=https%3A%2F%2Fwww.bing.com%2F", referer="https://www.bing.com/")
+            test = page.locator("div.dailycheckin_partnercard:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > p:nth-child(1)")
+            test_text = test.inner_text()
+            print(test_text)
             try:
                 task = page.locator(f"#daily_set_card > div:nth-child({i})")
                 await task.wait_for(state="visible", timeout=3000)
