@@ -1,6 +1,5 @@
 import asyncio
 import os
-
 import requests
 import random
 from dotenv import load_dotenv
@@ -25,7 +24,7 @@ async def main():
             user_data_dir="bing_profile"
     ) as browser:
         #SERPAPI
-        print(SERPAPI)
+
         def trending_words(count=3):
 
             url = f"https://serpapi.com/search?engine=google_trends_trending_now&geo=VN&api_key={SERPAPI}"
@@ -39,14 +38,11 @@ async def main():
             except Exception as e:
                 print(e)
                 return ["Artificial Intelligence", "Linux gaming", "Python automation"]
-        print(trending_words(3))
 
 
-        search_terms =  trending_words(3)
         # Get the default page from the persistent context
         pages = browser.pages
         page = pages[0] if pages else await browser.new_page()
-
         print("Navigating to Bing...")
         await page.goto("https://bing.com/")
 
@@ -55,8 +51,9 @@ async def main():
         try:
             print("Checking if already logged in...")
             # Look for the Rewards button. We only wait 5 seconds.
-            sign_in = page.get_by_text("Sign in")
-            await rewards.wait_for(state="visible", timeout=5000)
+            await asyncio.sleep(3)
+            sign_in = page.get_by_text("Sign In")
+            await sign_in.wait_for(state="visible")
             needs_login = True  # If we find it, we need to log in
         except Exception:
             print("Rewards button not found. Assuming we are already logged in!")
@@ -77,9 +74,9 @@ async def main():
 
             # Check alter sign-in
             try:
-                alt_link = page.locator('span.fui-Link')
-                await alt_link.wait_for(state="visible", timeout=3000)
-                await alt_link.click()
+                # alt_link = page.locator('span.fui-Link')
+                # await alt_link.wait_for(state="visible", timeout=3000)
+                # await alt_link.click()
 
                 password_option = page.locator('div[aria-label="Use your password"]')
                 await password_option.wait_for(state="visible", timeout=3000)
@@ -98,7 +95,7 @@ async def main():
 
             # Stay signed in?
             try:
-                stay_signed_in_btn = page.locator('input[id="idSIButton9"]')
+                stay_signed_in_btn = page.locator('button.fui-Button:nth-child(2)')
                 await stay_signed_in_btn.wait_for(state="visible", timeout=5000)
                 await stay_signed_in_btn.click()
             except Exception:
@@ -108,17 +105,35 @@ async def main():
 
         # --- YOUR AUTOMATION CODE GOES HERE ---
         print("Ready to start automating tasks!")
+        for i in range (3,5):
+            await asyncio.sleep(2)
+            await page.goto("https://www.bing.com//rewards/panelflyout?channel=bingflyout&partnerId=BingRewards&isDarkMode=0&ru=https%3A%2F%2Fwww.bing.com%2F", referer="https://www.bing.com/")
+            try:
+                task = page.locator(f"#daily_set_card > div:nth-child({i})")
+                await task.wait_for(state="visible", timeout=3000)
+            except Exception:
+                break
+            await page.set_extra_http_headers({"Referer": "https://www.bing.com//rewards/panelflyout?channel=bingflyout&partnerId=BingRewards&isDarkMode=0&ru=https%3A%2F%2Fwww.bing.com%2F"})
+            await task.click()
+            await asyncio.sleep(random.uniform(3,5))
+            await page.set_extra_http_headers({})
+        for i in range (1,9):
+            await asyncio.sleep(2)
+            current_page = page.url
+            if current_page != "https://www.bing.com//rewards/panelflyout?channel=bingflyout&partnerId=BingRewards&isDarkMode=0&ru=https%3A%2F%2Fwww.bing.com%2F":
+                await page.goto("https://www.bing.com//rewards/panelflyout?channel=bingflyout&partnerId=BingRewards&isDarkMode=0&ru=https%3A%2F%2Fwww.bing.com%2F", referer="https://www.bing.com/")
+            try:
 
-        # await page.goto("https://www.bing.com//rewards/panelflyout?channel=bingflyout&partnerId=BingRewards&isDarkMode=0&ru=https%3A%2F%2Fwww.bing.com%2F", referer="https://www.bing.com/")
+                daily_search = page.locator(f"a.ss_item:nth-child({i})")
+                await daily_search.wait_for(state="visible", timeout=3000)
+            except Exception:
+                break
+            await daily_search.click()
+            await asyncio.sleep(random.uniform(2,4))
 
-
-
-
-
-
-
-
-        #SEARCH
+        #
+        # search_terms =  trending_words(3)
+        # #SEARCH
         # for word in search_terms:
         #
         #     search_bar = page.locator('#sb_form_q')
@@ -132,7 +147,6 @@ async def main():
         #     await search_bar.clear()
 
         # Keep browser open to verify
-        await page.wait_for_event("close")
 
 
 if __name__ == "__main__":
