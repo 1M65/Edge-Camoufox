@@ -62,6 +62,7 @@ Installation
   cd Bing-Rewards-Automator
   ```
 **2. Create and activate a virtual environment (Recommended):**
+
 Create the environment
     ```.python -m venv .venv```.
 **Windows:**
@@ -85,6 +86,7 @@ Create a .env file in the root directory and add your SerpApi key.
 Use this software at your own risk. Automating Microsoft Rewards violates Microsoft's Terms of Service. While this bot uses an advanced anti-detect browser (Camoufox) and natural search terms to minimize risk, there is always a chance of account suspension or bans.
 
 Pro-Tip: Do NOT route this bot's traffic through the Tor network or cheap VPNs. Microsoft heavily flags datacenter/Tor exit node IPs. For the highest safety, run this on your standard home network or a mobile hotspot.
+
 📄 License
 
 This project is open-source and available under the [MIT License](https://opensource.org/license/mit).
