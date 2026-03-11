@@ -64,9 +64,13 @@ Installation
 **2. Create and activate a virtual environment (Recommended):**
 
 Create the environment
-    ```.python -m venv .venv```.
+    ```
+    .python -m venv .venv
+    ```.
 **Windows:**
-```.venv\Scripts\activate```
+```
+.venv\Scripts\activate
+```
 **Mac/Linux:**
 ```source .venv/bin/activate```
 **3. Install dependencies and fetch browser binaries:**
