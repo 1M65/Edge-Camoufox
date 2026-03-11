@@ -45,7 +45,7 @@ Double-click BingRewardsBot.exe to launch the dashboard. Create your first profi
 (Note: On the very first run, the app will ask to download the ~300MB Camoufox stealth browser engine. Allow it to finish downloading before starting tasks).
 
 
-💻 Building from Source (For Developers)
+# 💻 Building from Source (For Developers)
 
 If you want to read the code or run the bot directly through Python:
 Prerequisites
@@ -56,20 +56,20 @@ Prerequisites
 
 Installation
 
-1.Clone the repository:
+**1.Clone the repository:**
   ```
   git clone [https://github.com/yourusername/Bing-Rewards-Automator.git](https://github.com/yourusername/Bing-Rewards-Automator.git)
   cd Bing-Rewards-Automator
   ```
-# 2. Create and activate a virtual environment (Recommended):
-**Create the environment**
-    python -m venv .venv
+**2. Create and activate a virtual environment (Recommended):**
+Create the environment
+    ```.python -m venv .venv```.
 **Windows:**
 ```.venv\Scripts\activate```
 **Mac/Linux:**
 ```source .venv/bin/activate```
 # 3. Install dependencies and fetch browser binaries:
-**Install required Python packages**
+Install required Python packages
 ```pip install -r requirements.txt```
 
 **Download the custom stealth browser**
