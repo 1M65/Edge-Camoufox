@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd95855e-a49d-4bfb-bbf7-e447655da2cc" name="Changes" comment="Added daily_task, daily_search" />
+    <list default="true" id="dd95855e-a49d-4bfb-bbf7-e447655da2cc" name="Changes" comment="Commit base code (login using token, auto search top 3 trending words)">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Edge Camoufox.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Edge Camoufox.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonProject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +47,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/1M65/Edge-Automation.git&quot;,
-    &quot;accountId&quot;: &quot;ed57d821-2926-464f-9bbd-5d27deb9d638&quot;
+    &quot;accountId&quot;: &quot;d1641ba9-059f-4aa1-8e9e-7391a1271201&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
@@ -80,6 +87,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Endministrator\PycharmProjects\Edge Camoufox" />
+      <recent name="C:\Users\Endministrator\PycharmProjects\Edge Camoufox\PythonProject" />
       <recent name="$PROJECT_DIR$/PythonProject" />
     </key>
   </component>
@@ -99,7 +108,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonProject/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Endministrator\PycharmProjects\Edge Camoufox\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,8 +121,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.30387.173" />
-        <option value="bundled-python-sdk-4762d8aabb82-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.173" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
       </set>
     </attachedChunks>
   </component>
@@ -126,6 +135,10 @@
       <updated>1772999853988</updated>
       <workItem from="1772999855043" duration="260000" />
       <workItem from="1773038313626" duration="7560000" />
+      <workItem from="1773139219701" duration="4061000" />
+      <workItem from="1773158697448" duration="1201000" />
+      <workItem from="1773215532558" duration="2424000" />
+      <workItem from="1773224875178" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="Added daily_task, daily_search">
       <option name="closed" value="true" />
@@ -141,11 +154,35 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added daily_task, daily_search" />
     <option name="LAST_COMMIT_MESSAGE" value="Added daily_task, daily_search" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Edge_Camoufox$main.coverage" NAME="main Coverage Results" MODIFIED="1773216495035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Edge_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1773046832516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

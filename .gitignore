@@ -1,1 +1,20 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Secrets and API Keys
 .env
+
+# User Data & Browser Profiles
+bing_profiles/
+bing_profile/
+
+# PyInstaller / Compiled App
+build/
+dist/
+*.spec
+
+# Python Cache
+__pycache__/
+*.pyc
