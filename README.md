@@ -35,10 +35,10 @@ This bot uses SerpApi to fetch real trending words so your searches don't look l
 2. Open the extracted bot folder.
 3. Rename the `.env.example` file to `.env`.
 4. Open `.env` in Notepad and paste your API key:
-   ```text
+   ```
    SERPAPI_KEY=your_api_key_here
-
-  **3. Run the Bot**
+   ```
+### **3. Run the Bot**
 
 Double-click BingRewardsBot.exe to launch the dashboard. Create your first profile, enter your credentials, and click "Start Browser & Login"!
 
@@ -61,24 +61,24 @@ Installation
   git clone [https://github.com/yourusername/Bing-Rewards-Automator.git](https://github.com/yourusername/Bing-Rewards-Automator.git)
   cd Bing-Rewards-Automator
   ```
-2. Create and activate a virtual environment (Recommended):
-# Create the environment
+# 2. Create and activate a virtual environment (Recommended):
+**Create the environment**
     python -m venv .venv
-# Windows:
+**Windows:**
 ```.venv\Scripts\activate```
-# Mac/Linux:
+**Mac/Linux:**
 ```source .venv/bin/activate```
-3. Install dependencies and fetch browser binaries:
-# Install required Python packages
+# 3. Install dependencies and fetch browser binaries:
+**Install required Python packages**
 ```pip install -r requirements.txt```
 
-# Download the custom stealth browser
+**Download the custom stealth browser**
 ```camoufox fetch```
-4. Set up your environment variables:
+# 4. Set up your environment variables:
 Create a .env file in the root directory and add your SerpApi key.
 ```# File: .env```
 ```SERPAPI_KEY=your_api_key_here```
-5. Launch the application:
+# 5. Launch the application:
 ```python main.py```
 ⚠️ Disclaimer & Warning
 
