@@ -67,6 +67,7 @@ Create the environment
     ```
     .python -m venv .venv
     ```
+    
 **Windows:**
 ```
 .venv\Scripts\activate
@@ -90,8 +91,6 @@ camoufox fetch
 Create a .env file in the root directory and add your SerpApi key.
 ```
 # File: .env
-```
-```
 SERPAPI_KEY=your_api_key_here
 ```
 **5. Launch the application:**
