@@ -56,7 +56,7 @@ Prerequisites
 
 Installation
 
-**1.Clone the repository:**
+**1. Clone the repository:**
   ```
   git clone [https://github.com/yourusername/Bing-Rewards-Automator.git](https://github.com/yourusername/Bing-Rewards-Automator.git)
   cd Bing-Rewards-Automator
@@ -68,19 +68,19 @@ Create the environment
 ```.venv\Scripts\activate```
 **Mac/Linux:**
 ```source .venv/bin/activate```
-# 3. Install dependencies and fetch browser binaries:
+**3. Install dependencies and fetch browser binaries:**
 Install required Python packages
 ```pip install -r requirements.txt```
 
 **Download the custom stealth browser**
 ```camoufox fetch```
-# 4. Set up your environment variables:
+**4. Set up your environment variables:**
 Create a .env file in the root directory and add your SerpApi key.
 ```# File: .env```
 ```SERPAPI_KEY=your_api_key_here```
-# 5. Launch the application:
+**5. Launch the application:**
 ```python main.py```
-⚠️ Disclaimer & Warning
+# ⚠️ Disclaimer & Warning
 
 Use this software at your own risk. Automating Microsoft Rewards violates Microsoft's Terms of Service. While this bot uses an advanced anti-detect browser (Camoufox) and natural search terms to minimize risk, there is always a chance of account suspension or bans.
 
