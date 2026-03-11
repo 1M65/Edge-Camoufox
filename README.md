@@ -66,25 +66,38 @@ Installation
 Create the environment
     ```
     .python -m venv .venv
-    ```.
+    ```
 **Windows:**
 ```
 .venv\Scripts\activate
 ```
+
 **Mac/Linux:**
-```source .venv/bin/activate```
+```
+source .venv/bin/activate
+```
 **3. Install dependencies and fetch browser binaries:**
 Install required Python packages
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 **Download the custom stealth browser**
-```camoufox fetch```
+```
+camoufox fetch
+```
 **4. Set up your environment variables:**
 Create a .env file in the root directory and add your SerpApi key.
-```# File: .env```
-```SERPAPI_KEY=your_api_key_here```
+```
+# File: .env
+```
+```
+SERPAPI_KEY=your_api_key_here
+```
 **5. Launch the application:**
-```python main.py```
+```
+python main.py
+```
 # ⚠️ Disclaimer & Warning
 
 Use this software at your own risk. Automating Microsoft Rewards violates Microsoft's Terms of Service. While this bot uses an advanced anti-detect browser (Camoufox) and natural search terms to minimize risk, there is always a chance of account suspension or bans.
